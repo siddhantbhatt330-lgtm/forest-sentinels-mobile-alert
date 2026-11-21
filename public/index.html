@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07140f">
+  <title>Forest Sentinels | Mobile Alert Network</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🌲</span>
+      <div>
+        <h2>FOREST SENTINELS</h2>
+        <small>MOBILE ALERT NETWORK</small>
+      </div>
+    </div>
+    <span class="status"><i></i> SYSTEM ONLINE</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">WILDLIFE PROTECTION NETWORK</p>
+      <h1>Stay Alert.<br><span>Stay Protected.</span></h1>
+      <p class="intro">
+        Connect your mobile and receive instant wildlife danger
+        alerts from the Forest Sentinels monitoring network.
+      </p>
+      <div class="hero-actions">
+        <button id="connect-btn">Enable Push Notifications</button>
+        <span id="connection-status">Not connected</span>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat-card">
+        <span>📱</span>
+        <h3 id="device-status">Not Connected</h3>
+        <p>My Device</p>
+      </div>
+      <div class="stat-card">
+        <span>🔔</span>
+        <h3>Push Alerts</h3>
+        <p>Notification Service</p>
+      </div>
+      <div class="stat-card">
+        <span>💬</span>
+        <h3>SMS Alerts</h3>
+        <p>SMS Service Setup Pending</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>📲 Register Your Mobile</h2>
+      <p>Enter your details to join the protection network.</p>
+
+      <form id="registration-form">
+        <label for="full-name">Full Name</label>
+        <input id="full-name" type="text" placeholder="Enter your name" required>
+
+        <label for="phone">Mobile Number</label>
+        <input id="phone" type="tel" placeholder="+91 9876543210"
+          pattern="[+0-9 ]{10,16}" required>
+
+        <label for="zone">Monitoring Zone</label>
+        <select id="zone" required>
+          <option value="">Select your zone</option>
+          <option value="A">Zone A</option>
+          <option value="B">Zone B</option>
+          <option value="C">Zone C</option>
+          <option value="D">Zone D</option>
+        </select>
+
+        <button type="submit" class="register-btn">
+          Register My Mobile
+        </button>
+      </form>
+      <p id="registration-status" role="status"></p>
+    </section>
+
+    <section class="alert-panel">
+      <div>
+        <span class="alert-label">LATEST ALERT</span>
+        <h2>🛡️ Your Safety Matters</h2>
+        <p>Enable notifications to stay informed about wildlife activity.</p>
+      </div>
+      <span class="shield">🛡️</span>
+    </section>
+
+    <footer>
+      FOREST SENTINELS © 2026 · PROTECTING WILDLIFE. SAFEGUARDING COMMUNITIES.
+    </footer>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
