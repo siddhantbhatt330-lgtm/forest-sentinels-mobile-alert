@@ -1,97 +1,149 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07140f">
+  <meta name="theme-color" content="#07130f">
+  <meta name="description" content="Forest Sentinels Mobile Alert Network — wildlife protection and community safety.">
   <title>Forest Sentinels | Mobile Alert Network</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
 
   <header class="topbar">
-    <div class="brand">
-      <span class="logo">🌲</span>
-      <div>
-        <h2>FOREST SENTINELS</h2>
+    <a class="brand" href="#" aria-label="Forest Sentinels home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" role="img">
+          <path class="mark-shield" d="M32 4 54 12v17c0 14-9 24-22 31C19 53 10 43 10 29V12L32 4Z"/>
+          <path class="mark-tree" d="M32 13 20 30h7l-9 11h11v8h6v-8h11l-9-11h7L32 13Z"/>
+          <path class="mark-ground" d="M19 51h26"/>
+        </svg>
+      </span>
+      <span class="brand-copy">
+        <strong>FOREST SENTINELS</strong>
         <small>MOBILE ALERT NETWORK</small>
-      </div>
-    </div>
+      </span>
+    </a>
     <span class="status"><i></i> SYSTEM ONLINE</span>
   </header>
 
   <main class="container">
     <section class="hero">
-      <p class="eyebrow">WILDLIFE PROTECTION NETWORK</p>
-      <h1>Stay Alert.<br><span>Stay Protected.</span></h1>
-      <p class="intro">
-        Connect your mobile and receive instant wildlife danger
-        alerts from the Forest Sentinels monitoring network.
-      </p>
-      <div class="hero-actions">
-        <button id="connect-btn">Enable Push Notifications</button>
-        <span id="connection-status">Not connected</span>
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> WILDLIFE PROTECTION NETWORK</p>
+        <h1>Stay Alert.<br><span>Stay Protected.</span></h1>
+        <p class="intro">Connect your mobile and receive instant wildlife danger alerts from the Forest Sentinels monitoring network.</p>
+        <div class="hero-actions">
+          <button id="connect-btn" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+            Enable Push Notifications
+          </button>
+          <span id="connection-status">Not connected</span>
+        </div>
+      </div>
+      <div class="hero-seal" aria-hidden="true">
+        <div class="seal-ring">
+          <svg viewBox="0 0 120 120">
+            <path d="M60 10 99 24v31c0 25-16 43-39 55C37 98 21 80 21 55V24L60 10Z"/>
+            <path d="m60 27-19 27h11L37 70h17v16h12V70h17L68 54h11L60 27Z"/>
+            <path d="M42 91h36"/>
+          </svg>
+          <span>PROTECT · DETECT · ALERT</span>
+        </div>
       </div>
     </section>
 
-    <section class="stats">
-      <div class="stat-card">
-        <span>📱</span>
-        <h3 id="device-status">Not Connected</h3>
-        <p>My Device</p>
-      </div>
-      <div class="stat-card">
-        <span>🔔</span>
-        <h3>Push Alerts</h3>
-        <p>Notification Service</p>
-      </div>
-      <div class="stat-card">
-        <span>💬</span>
-        <h3>SMS Alerts</h3>
-        <p>SMS Service Setup Pending</p>
-      </div>
+    <section class="stats" aria-label="Network status">
+      <article class="stat-card">
+        <span class="stat-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.2"/><path d="M10 18.5h4"/></svg>
+        </span>
+        <div class="stat-copy">
+          <h3 id="device-status">Not Connected</h3>
+          <p>My Device</p>
+        </div>
+      </article>
+      <article class="stat-card">
+        <span class="stat-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+        </span>
+        <div class="stat-copy">
+          <h3>Push Alerts</h3>
+          <p>Notification Service</p>
+        </div>
+      </article>
+      <article class="stat-card">
+        <span class="stat-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H6l-3 2v-6.5A7.5 7.5 0 1 1 20 11.5Z"/><path d="M8 11h.01M12 11h.01M16 11h.01"/></svg>
+        </span>
+        <div class="stat-copy">
+          <h3>SMS Alerts</h3>
+          <p>SMS Service Setup Pending</p>
+        </div>
+      </article>
     </section>
 
     <section class="panel">
-      <h2>📲 Register Your Mobile</h2>
-      <p>Enter your details to join the protection network.</p>
+      <div class="section-heading">
+        <span class="section-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.2"/><path d="M10 18.5h4"/></svg>
+        </span>
+        <div>
+          <p class="eyebrow">JOIN THE NETWORK</p>
+          <h2>Register Your Mobile</h2>
+          <p class="section-description">Enter your details to join the protection network.</p>
+        </div>
+      </div>
 
       <form id="registration-form">
-        <label for="full-name">Full Name</label>
-        <input id="full-name" type="text" placeholder="Enter your name" required>
+        <div class="field">
+          <label for="full-name">Full Name</label>
+          <input id="full-name" type="text" placeholder="Enter your name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="phone">Mobile Number</label>
+          <input id="phone" type="tel" placeholder="+91 9876543210" pattern="[+0-9 ]{10,16}" autocomplete="tel" required>
+        </div>
+        <div class="field">
+          <label for="zone">Monitoring Zone</label>
+          
+<select id="zone" required>
+    <option value="">Select your zone</option>
+    <option value="Zone A">Zone A</option>
+    <option value="Zone B">Zone B</option>
+    <option value="Zone C">Zone C</option>
+    <option value="Zone D">Zone D</option>
+</select>
 
-        <label for="phone">Mobile Number</label>
-        <input id="phone" type="tel" placeholder="+91 9876543210"
-          pattern="[+0-9 ]{10,16}" required>
-
-        <label for="zone">Monitoring Zone</label>
-        <select id="zone" required>
-          <option value="">Select your zone</option>
-          <option value="A">Zone A</option>
-          <option value="B">Zone B</option>
-          <option value="C">Zone C</option>
-          <option value="D">Zone D</option>
-        </select>
-
+        </div>
         <button type="submit" class="register-btn">
           Register My Mobile
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
       </form>
-      <p id="registration-status" role="status"></p>
+      <p id="registration-status" role="status" aria-live="polite"></p>
     </section>
 
     <section class="alert-panel">
-      <div>
+      <div class="alert-copy">
         <span class="alert-label">LATEST ALERT</span>
-        <h2>🛡️ Your Safety Matters</h2>
+        <h2>Your Safety Matters</h2>
         <p>Enable notifications to stay informed about wildlife activity.</p>
       </div>
-      <span class="shield">🛡️</span>
+      <span class="alert-emblem" aria-hidden="true">
+        <svg viewBox="0 0 64 64"><path d="M32 5 53 13v16c0 14-8 23-21 30C19 52 11 43 11 29V13L32 5Z"/><path d="m22 32 7 7 14-15"/></svg>
+      </span>
     </section>
 
     <footer>
-      FOREST SENTINELS © 2026 · PROTECTING WILDLIFE. SAFEGUARDING COMMUNITIES.
+      <span>FOREST SENTINELS © 2026</span>
+      <span class="footer-divider"></span>
+      <span>PROTECTING WILDLIFE. SAFEGUARDING COMMUNITIES.</span>
     </footer>
   </main>
 
