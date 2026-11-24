@@ -133,6 +133,8 @@ document.getElementById("registration-form").addEventListener("submit", async (e
     document.getElementById("device-status").textContent = "Connected";
     document.getElementById("connection-status").textContent = "Mobile registered";
 
+    localStorage.setItem("forestSentinelsConnected", "true");
+
     document.getElementById("registration-form").reset();
 
   } catch (error) {
@@ -140,3 +142,13 @@ document.getElementById("registration-form").addEventListener("submit", async (e
     status.textContent = "Error: " + error.message;
   }
 });
+
+
+// Restore mobile connection status after page refresh
+const savedToken = localStorage.getItem("forestSentinelsToken");
+const isConnected = localStorage.getItem("forestSentinelsConnected");
+
+if (savedToken && isConnected === "true") {
+  document.getElementById("device-status").textContent = "Connected";
+  document.getElementById("connection-status").textContent = "Mobile registered";
+}
